@@ -6,18 +6,18 @@
 # - runtime Requires if any
 
 %define         kdeappsver      21.12.3
-%define		kdeframever	5.249.0
+%define		kdeframever	6.0
 %define		qtver		5.15.2
 %define		kfname		kfilemetadata
 Summary:	File metadata and extraction library
 Summary(pl.UTF-8):	Biblioteka do obsługi i wydobywania metadanych plików
 Name:		kf6-%{kfname}
-Version:	5.249.0
-Release:	0.1
+Version:	6.0.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/unstable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	b3ff25663dc398081c7f026e139bb57e
+Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
+# Source0-md5:	6234859a96372fcd260a3a229dc0bfb3
 Patch0:		xattr.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -34,7 +34,8 @@ BuildRequires:	cmake >= 3.16
 BuildRequires:	ebook-tools-devel
 BuildRequires:	exiv2-devel
 BuildRequires:	ffmpeg-devel
-BuildRequires:	ka5-kdegraphics-mobipocket-devel >= %{kdeappsver}
+BuildRequires:	ka5-krita
+BuildRequires:	ka6-kdegraphics-mobipocket-devel >= %{kdeappsver}
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
 BuildRequires:	kf6-karchive-devel >= %{version}
 BuildRequires:	kf6-kconfig-devel >= %{version}
@@ -113,14 +114,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_officeextractor.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_plaintextextractor.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_poextractor.so
-#%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_popplerextractor.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_popplerextractor.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_postscriptdscextractor.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_taglibextractor.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_xmlextractor.so
-#%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_mobiextractor.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_mobiextractor.so
 %attr(755,root,root) %{_datadir}/qlogging-categories6/kfilemetadata.renamecategories
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_pngextractor.so
-#%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
 
 %files devel
 %defattr(644,root,root,755)
