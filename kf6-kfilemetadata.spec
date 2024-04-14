@@ -6,18 +6,18 @@
 # - runtime Requires if any
 
 %define         kdeappsver      21.12.3
-%define		kdeframever	6.0
+%define		kdeframever	6.1
 %define		qtver		5.15.2
 %define		kfname		kfilemetadata
 Summary:	File metadata and extraction library
 Summary(pl.UTF-8):	Biblioteka do obsługi i wydobywania metadanych plików
 Name:		kf6-%{kfname}
-Version:	6.0.0
+Version:	6.1.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6234859a96372fcd260a3a229dc0bfb3
+# Source0-md5:	3e8c83dc749f935b6e39f66b086118d4
 Patch0:		xattr.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -34,10 +34,11 @@ BuildRequires:	cmake >= 3.16
 BuildRequires:	ebook-tools-devel
 BuildRequires:	exiv2-devel
 BuildRequires:	ffmpeg-devel
-BuildRequires:	ka5-krita
+#BuildRequires:	ka5-krita
 BuildRequires:	ka6-kdegraphics-mobipocket-devel >= %{kdeappsver}
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
 BuildRequires:	kf6-karchive-devel >= %{version}
+BuildRequires:	kf6-kcodecs-devel >= %{version}
 BuildRequires:	kf6-kconfig-devel >= %{version}
 BuildRequires:	kf6-kcoreaddons-devel >= %{version}
 BuildRequires:	kf6-ki18n-devel >= %{version}
