@@ -18,7 +18,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
 # Source0-md5:	2257fa51f8c82b6e0ee1d1345648c2b2
-#Patch0:		xattr.patch
+#Patch0: xattr.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -28,6 +28,7 @@ BuildRequires:	Qt6Test-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 %endif
+BuildRequires:	Qt6Qml-devel >= %{qtver}
 BuildRequires:	attr-devel
 BuildRequires:	catdoc
 BuildRequires:	cmake >= 3.16
@@ -43,6 +44,7 @@ BuildRequires:	kf6-kconfig-devel >= %{version}
 BuildRequires:	kf6-kcoreaddons-devel >= %{version}
 BuildRequires:	kf6-ki18n-devel >= %{version}
 BuildRequires:	ninja
+BuildRequires:	poppler-cpp-devel
 BuildRequires:	poppler-qt6-devel
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
