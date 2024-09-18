@@ -7,7 +7,7 @@
 
 %define         kdeappsver      21.12.3
 %define		kdeframever	6.6
-%define		qtver		5.15.2
+%define		qtver		6.7.2
 %define		kfname		kfilemetadata
 Summary:	File metadata and extraction library
 Summary(pl.UTF-8):	Biblioteka do obsługi i wydobywania metadanych plików
@@ -44,8 +44,8 @@ BuildRequires:	kf6-kconfig-devel >= %{version}
 BuildRequires:	kf6-kcoreaddons-devel >= %{version}
 BuildRequires:	kf6-ki18n-devel >= %{version}
 BuildRequires:	ninja
-BuildRequires:	poppler-cpp-devel
-BuildRequires:	poppler-qt6-devel
+BuildRequires:	poppler-cpp-devel >= 24.08.0
+BuildRequires:	poppler-qt6-devel >= 24.08.0
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	taglib-devel
@@ -79,7 +79,8 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 %cmake -B build \
 	-G Ninja \
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+	--debug-output
 
 %ninja_build -C build
 
