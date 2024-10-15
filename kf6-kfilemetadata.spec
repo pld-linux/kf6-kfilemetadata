@@ -13,7 +13,7 @@ Summary:	File metadata and extraction library
 Summary(pl.UTF-8):	Biblioteka do obsługi i wydobywania metadanych plików
 Name:		kf6-%{kfname}
 Version:	6.7.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -45,6 +45,7 @@ BuildRequires:	kf6-kcoreaddons-devel >= %{version}
 BuildRequires:	kf6-ki18n-devel >= %{version}
 BuildRequires:	ninja
 BuildRequires:	poppler-cpp-devel >= 24.08.0
+BuildRequires:	poppler-glib-devel >= 24.08.0
 BuildRequires:	poppler-qt6-devel >= 24.08.0
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
