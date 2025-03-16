@@ -6,18 +6,18 @@
 # - runtime Requires if any
 
 %define         kdeappsver      21.12.3
-%define		kdeframever	6.11
+%define		kdeframever	6.12
 %define		qtver		6.7.2
 %define		kfname		kfilemetadata
 Summary:	File metadata and extraction library
 Summary(pl.UTF-8):	Biblioteka do obsługi i wydobywania metadanych plików
 Name:		kf6-%{kfname}
-Version:	6.11.0
+Version:	6.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	43e1dba98100aebf27297815a0fb8296
+# Source0-md5:	6d5928b24c14a7b534835c92de2e24c6
 #Patch0: xattr.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -105,6 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kfname}6.lang
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/kfilemetadata_dump6
 %{_datadir}/qlogging-categories6/kfilemetadata.categories
 %attr(755,root,root) %{_libdir}/libKF6FileMetaData.so.*.*.*
 %ghost %{_libdir}/libKF6FileMetaData.so.3
