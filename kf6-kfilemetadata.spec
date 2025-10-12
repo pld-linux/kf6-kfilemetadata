@@ -6,18 +6,18 @@
 # - runtime Requires if any
 
 %define         kdeappsver      21.12.3
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		6.7.2
 %define		kfname		kfilemetadata
 Summary:	File metadata and extraction library
 Summary(pl.UTF-8):	Biblioteka do obsługi i wydobywania metadanych plików
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	b4a544380ea6a5abf6e81fd487511ffb
+# Source0-md5:	ab1fa9fcc4c911bb6b8f20f2537921f8
 #Patch0: xattr.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -108,28 +108,28 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kfilemetadata_dump6
 %{_datadir}/qlogging-categories6/kfilemetadata.categories
-%attr(755,root,root) %{_libdir}/libKF6FileMetaData.so.*.*.*
+%{_libdir}/libKF6FileMetaData.so.*.*.*
 %ghost %{_libdir}/libKF6FileMetaData.so.3
 %dir %{_libdir}/qt6/plugins/kf6/kfilemetadata
 %dir %{_libdir}/qt6/plugins/kf6/kfilemetadata/writers
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/writers/kfilemetadata_taglibwriter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_epubextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_exiv2extractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_fb2extractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_ffmpegextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_odfextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_office2007extractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_officeextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_plaintextextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_poextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_popplerextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_postscriptdscextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_taglibextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_xmlextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_mobiextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/writers/kfilemetadata_taglibwriter.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_epubextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_exiv2extractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_fb2extractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_ffmpegextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_odfextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_office2007extractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_officeextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_plaintextextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_poextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_popplerextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_postscriptdscextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_taglibextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_xmlextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_mobiextractor.so
 %attr(755,root,root) %{_datadir}/qlogging-categories6/kfilemetadata.renamecategories
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_pngextractor.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_pngextractor.so
+%{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
 
 %files devel
 %defattr(644,root,root,755)
