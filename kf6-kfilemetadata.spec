@@ -60,6 +60,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 File metadata and extraction library.
 
+%description -l pl.UTF-8
+Biblioteka do wyciągania metadanych plików.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
